@@ -3,146 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vivek Kumar — B.Tech CSE Student, Web Developer & Problem Solver. Portfolio showcasing skills, education and experience.">
     <title>Vivek Kumar | Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Vivek.</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <span class="preloader-logo">{ V }</span>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
         </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">Vivek<span>.</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+        <a href="mailto:oct11.vivek@gmail.com" class="btn-outline">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#experience" class="mobile-link">Experience</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="profile-img-container">
-                <img src="profile.jpg" alt="Vivek Kumar">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-tag reveal-fade">👋 Welcome to my portfolio</p>
+                <h1 class="hero-title reveal-fade delay-1">
+                    Hi, I'm <span class="gradient-text">Vivek Kumar</span>
+                </h1>
+                <div class="hero-subtitle reveal-fade delay-2">
+                    <span class="typed-prefix">I'm a </span>
+                    <span class="typed-text" id="typed"></span><span class="typed-cursor">|</span>
+                </div>
+                <p class="hero-desc reveal-fade delay-3">
+                    Passionate about Technology, Innovation, and Problem Solving. Building the future one line of code at a time.
+                </p>
+                <div class="hero-cta reveal-fade delay-4">
+                    <a href="#contact" class="btn-primary">Get In Touch <i class="fas fa-arrow-right"></i></a>
+                    <a href="#about" class="btn-ghost">View Work <i class="fas fa-arrow-down"></i></a>
+                </div>
+                <div class="hero-social reveal-fade delay-5">
+                    <a href="https://github.com/Vivekr11" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/vivekr11" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:oct11.vivek@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
-            <h1>Hi, I'm <span class="highlight">Vivek Kumar</span></h1>
-            <h2 class="typing-text">B.Tech CSE Student</h2>
-            <p>Passionate about Technology, Innovation, and Problem Solving.</p>
-            <div class="social-links">
-                <a href="https://github.com/Vivekr11" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/vivekr11" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:oct11.vivek@gmail.com"><i class="fas fa-envelope"></i></a>
+            <div class="hero-image reveal-scale delay-2">
+                <div class="hero-img-ring"></div>
+                <div class="hero-img-ring ring-2"></div>
+                <div class="hero-img-wrapper">
+                    <img src="profile.jpg" alt="Vivek Kumar">
+                </div>
             </div>
-            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am a motivated first-year B.Tech (CSE) student at Lovely Professional University with a strong interest in technology and problem-solving. I am eager to develop technical skills in Python, Java, HTML, and CSS while gaining hands-on experience through projects and internships.</p>
-                    <p>I am a quick learner with leadership experience and a passion for innovation and teamwork. When I'm not coding, you can find me exploring new technologies, gaming, watching movies, or listening to music.</p>
+            <div class="section-header reveal-up">
+                <p class="section-tag">Get to know me</p>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <p>I am a motivated <strong>first-year B.Tech (CSE) student</strong> at Lovely Professional University with a strong focus on building real-world tech skills.</p>
+                    <p>I work with <strong>HTML5, CSS3, JavaScript, Python, and C</strong>, and have hands-on experience with databases like <strong>PostgreSQL</strong> and version control using <strong>Git & GitHub</strong>. I'm actively building projects and looking for internship opportunities to grow further.</p>
+                    <p>Beyond code, I bring strong <strong>leadership and communication skills</strong> from managing real teams and leading academic projects. When I'm not at my desk, you'll find me exploring new tech, gaming, or listening to music.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>LPU, Jalandhar, India</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>oct11.vivek@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9835276938</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>B.Tech CSE, 2025–2029</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="education-card">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <div class="edu-item">
-                        <h4>Bachelor of Technology in CSE</h4>
-                        <p>Lovely Professional University, Jalandhar (2025–2029)</p>
-                    </div>
-                    <div class="edu-item">
-                        <h4>Class XII (CBSE)</h4>
-                        <p>Creane Memorial High School, Gaya (2025) - 75%</p>
-                    </div>
-                    <div class="edu-item">
-                        <h4>Class X (CBSE)</h4>
-                        <p>British English School, Gaya (2023) - 91%</p>
+                <div class="education-section reveal-right">
+                    <h3 class="card-heading"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="edu-timeline">
+                        <div class="edu-card">
+                            <div class="edu-year">2025 – 2029</div>
+                            <h4>B.Tech in Computer Science</h4>
+                            <p>Lovely Professional University, Jalandhar</p>
+                            <span class="edu-badge">Current</span>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-year">2025</div>
+                            <h4>Class XII (CBSE)</h4>
+                            <p>Creane Memorial High School, Gaya</p>
+                            <span class="edu-score">75%</span>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-year">2023</div>
+                            <h4>Class X (CBSE)</h4>
+                            <p>British English School, Gaya</p>
+                            <span class="edu-score">91%</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section bg-alt">
+    <!-- Skills Section -->
+    <section id="skills" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Technical</h3>
+            <div class="section-header reveal-up">
+                <p class="section-tag">What I know</p>
+                <h2 class="section-title">My Skills</h2>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skill-block reveal-up delay-1">
+                    <div class="skill-block-icon"><i class="fas fa-code"></i></div>
+                    <h3>Technical Skills</h3>
                     <div class="skill-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Python (Learning)</span>
-                        <span>Web Development Basics</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">C Programming</span>
+                        <span class="tag">DBMS</span>
+                        <span class="tag">Web Dev Basics</span>
+                        <span class="tag">Git</span>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-block reveal-up delay-2">
+                    <div class="skill-block-icon"><i class="fas fa-brain"></i></div>
                     <h3>Soft Skills</h3>
                     <div class="skill-tags">
-                        <span>Leadership</span>
-                        <span>Team Management</span>
-                        <span>Communication</span>
-                        <span>Problem-Solving</span>
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Team Management</span>
+                        <span class="tag">Communication</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Critical Thinking</span>
+                        <span class="tag">Adaptability</span>
+                    </div>
+                </div>
+                <div class="skill-block reveal-up delay-3">
+                    <div class="skill-block-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Postgresql</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Antigravity</span>
+                        <span class="tag">MS Office</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <div class="section-header reveal-up">
+                <p class="section-tag">My journey</p>
+                <h2 class="section-title">Experience</h2>
+            </div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Operations Manager (Family Business)</h3>
-                        <p>Managed operations in family textile business for one year, overseeing sales, customer interactions, and inventory management.</p>
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Operations Manager</h3>
+                                <p class="timeline-company">Family Textile Business</p>
+                            </div>
+                            <span class="timeline-badge">1 Year</span>
+                        </div>
+                        <p class="timeline-desc">Managed day-to-day operations including sales coordination, customer relationship management, and inventory oversight for the family textile business.</p>
+                        <div class="timeline-skills">
+                            <span>Operations</span>
+                            <span>Sales</span>
+                            <span>Inventory Management</span>
+                            <span>Customer Relations</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Project Lead (School/College)</h3>
-                        <p>Led multiple school and college projects, ensuring coordination, planning, and timely completion.</p>
+                <div class="timeline-item reveal-left delay-1">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Project Lead</h3>
+                                <p class="timeline-company">School & College Projects</p>
+                            </div>
+                            <span class="timeline-badge">Multiple</span>
+                        </div>
+                        <p class="timeline-desc">Led multiple academic projects from planning to completion, coordinating teams, managing timelines, and presenting deliverables.</p>
+                        <div class="timeline-skills">
+                            <span>Leadership</span>
+                            <span>Planning</span>
+                            <span>Coordination</span>
+                            <span>Presentation</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section bg-alt">
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 9835276938</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>oct11.vivek@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Lovely Professional University, Jalandhar</span>
-                    </div>
-                </div>
+            <div class="section-header reveal-up">
+                <p class="section-tag">Let's connect</p>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-desc">Open to internship opportunities, collaborations, and tech conversations. Feel free to reach out!</p>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:oct11.vivek@gmail.com" class="contact-card reveal-up delay-1">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Email</h4>
+                    <p>oct11.vivek@gmail.com</p>
+                </a>
+                <a href="tel:+919835276938" class="contact-card reveal-up delay-2">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h4>Phone</h4>
+                    <p>+91 9835276938</p>
+                </a>
+                <a href="https://linkedin.com/in/vivekr11" target="_blank" rel="noopener" class="contact-card reveal-up delay-3">
+                    <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <h4>LinkedIn</h4>
+                    <p>linkedin.com/in/vivekr11</p>
+                </a>
+                <a href="https://github.com/Vivekr11" target="_blank" rel="noopener" class="contact-card reveal-up delay-4">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <h4>GitHub</h4>
+                    <p>github.com/Vivekr11</p>
+                </a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Vivek Kumar. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="footer-logo">Vivek<span>.</span></p>
+            <p class="footer-copy">&copy; 2025 Vivek Kumar. Crafted with passion.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Vivekr11" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/vivekr11" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:oct11.vivek@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
